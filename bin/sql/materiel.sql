@@ -1,14 +1,14 @@
 Drop database if exists Gestion_materiels ;
      
 create database Gestion_materiels;
-	use Gestion_materiels;
+Use Gestion_materiels;
 	create table Professeurs(idprof int (3) not null auto_increment,
 		Nom varchar(20),
         Prenom varchar(20),
         Adresse varchar(25),
         Diplome varchar(15),
         primary key(idprof));
-	insert into Professeurs values('','VOUANDZA','Cedric','31 Rue du Docteur Guerin','Doctorat');
+	insert into Professeurs values('','Ben Hamdoune','Yassine','31 Rue du Docteur Guerin','Doctorat');
 
 		create table Materiels(idm int (3) not null auto_increment, 
 		designation varchar(100),

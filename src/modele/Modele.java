@@ -29,7 +29,7 @@ public class Modele {// connexion à la bdd
              
         try {
             uneBdd.seConnecter();
-            Statement unStat = uneBdd.getMaconnexion().createStatement();
+            Statement unStat = uneBdd.getMaConnexion().createStatement();
             unStat.execute(requete);
             unStat.close();
             uneBdd.seDeconnecter();
@@ -46,7 +46,7 @@ public class Modele {// connexion à la bdd
     	String requete = "select * from Professeurs ; ";
     	try {
     		uneBdd.seConnecter();
-    		Statement unStat = uneBdd.getMaconnexion().createStatement(); 
+    		Statement unStat = uneBdd.getMaConnexion().createStatement(); 
     		ResultSet desResultats = unStat.executeQuery(requete);
     	
     		while (desResultats.next()) //tant qu'il un resultat suivant
@@ -78,7 +78,7 @@ public class Modele {// connexion à la bdd
    		String requete = "DELETE FROM Professeurs WHERE idprof = " + idprof;
    		try {
    			uneBdd.seConnecter();
-   			Statement unStat = uneBdd.getMaconnexion().createStatement();
+   			Statement unStat = uneBdd.getMaConnexion().createStatement();
    			unStat.execute(requete);
    			unStat.close();
    			uneBdd.seDeconnecter();
@@ -94,7 +94,7 @@ public class Modele {// connexion à la bdd
  		String requete = "SELECT * FROM Professeurs WHERE idprof = "+idprof+";";
  		try {
  			uneBdd.seConnecter();
- 			Statement unStat = uneBdd.getMaconnexion().createStatement();
+ 			Statement unStat = uneBdd.getMaConnexion().createStatement();
  			ResultSet unResultat = unStat.executeQuery(requete);
  			if (unResultat.next()) {
  				unProfesseur = new Professeurs(
@@ -124,7 +124,7 @@ public class Modele {// connexion à la bdd
  				+ unProfesseur.getDiplome() + "' WHERE idprof = "+unProfesseur.getIdprof()+";";
  		try {
  			uneBdd.seConnecter();
- 			Statement unStat = uneBdd.getMaconnexion().createStatement();
+ 			Statement unStat = uneBdd.getMaConnexion().createStatement();
  			unStat.execute(requete);
  			unStat.close();
  			uneBdd.seDeconnecter();
@@ -139,7 +139,7 @@ public class Modele {// connexion à la bdd
  		String requete = "SELECT count(*) as nb FROM Professeurs;";
  		try {
  			uneBdd.seConnecter();
- 			Statement unStat = uneBdd.getMaconnexion().createStatement();
+ 			Statement unStat = uneBdd.getMaConnexion().createStatement();
  			ResultSet unResultat = unStat.executeQuery(requete);
  			if (unResultat.next()) {
  				nbProfesseurs = unResultat.getInt("nb");
@@ -162,7 +162,7 @@ public class Modele {// connexion à la bdd
              
         try {
             uneBdd.seConnecter();
-            Statement unStat = uneBdd.getMaconnexion().createStatement();
+            Statement unStat = uneBdd.getMaConnexion().createStatement();
             unStat.execute(requete);
             unStat.close();
             uneBdd.seDeconnecter();
@@ -180,7 +180,7 @@ public static ArrayList<Materiels> selectAllMateriels ()  //selection de tous le
 		String requete = "select * from Materiels ; ";
 		try {
 			uneBdd.seConnecter();
-			Statement unStat = uneBdd.getMaconnexion().createStatement(); 
+			Statement unStat = uneBdd.getMaConnexion().createStatement(); 
 			ResultSet desResultats = unStat.executeQuery(requete);
 		
 			while (desResultats.next()) //tant qu'il un resultat suivant
@@ -209,7 +209,7 @@ public static ArrayList<Materiels> selectAllMateriels ()  //selection de tous le
  		String requete = "DELETE FROM Materiels WHERE idm = " + idm;
  		try {
  			uneBdd.seConnecter();
- 			Statement unStat = uneBdd.getMaconnexion().createStatement();
+ 			Statement unStat = uneBdd.getMaConnexion().createStatement();
  			unStat.execute(requete);
  			unStat.close();
  			uneBdd.seDeconnecter();
@@ -226,7 +226,7 @@ public static ArrayList<Materiels> selectAllMateriels ()  //selection de tous le
  		String requete = "SELECT * FROM Materiels WHERE idm = "+idm+";";
  		try {
  			uneBdd.seConnecter();
- 			Statement unStat = uneBdd.getMaconnexion().createStatement();
+ 			Statement unStat = uneBdd.getMaConnexion().createStatement();
  			ResultSet unResultat = unStat.executeQuery(requete);
  			if (unResultat.next()) {
  				unMateriel = new Materiels (
@@ -252,7 +252,7 @@ public static ArrayList<Materiels> selectAllMateriels ()  //selection de tous le
  				+ unMateriel.getEtat() + "' WHERE idm = "+unMateriel.getIdm()+";";
  		try {
  			uneBdd.seConnecter();
- 			Statement unStat = uneBdd.getMaconnexion().createStatement();
+ 			Statement unStat = uneBdd.getMaConnexion().createStatement();
  			unStat.execute(requete);
  			unStat.close();
  			uneBdd.seDeconnecter();
@@ -268,7 +268,7 @@ public static ArrayList<Materiels> selectAllMateriels ()  //selection de tous le
   		String requete = "SELECT count(*) as nb FROM Materiels;";
   		try {
   			uneBdd.seConnecter();
-  			Statement unStat = uneBdd.getMaconnexion().createStatement();
+  			Statement unStat = uneBdd.getMaConnexion().createStatement();
   			ResultSet unResultat = unStat.executeQuery(requete);
   			if (unResultat.next()) {
   				nbMateriels = unResultat.getInt("nb");
@@ -291,7 +291,7 @@ public static ArrayList<Materiels> selectAllMateriels ()  //selection de tous le
               + uneLocation.getDuree() + "');";
         try {
             uneBdd.seConnecter();
-            Statement unStat = uneBdd.getMaconnexion().createStatement();
+            Statement unStat = uneBdd.getMaConnexion().createStatement();
             unStat.execute(requete);
             unStat.close();
             uneBdd.seConnecter();
@@ -308,7 +308,7 @@ public static ArrayList<Materiels> selectAllMateriels ()  //selection de tous le
 			    	String requete = "select * from Location ; ";
 			    	try {
 			    		uneBdd.seConnecter();
-			    		Statement unStat = uneBdd.getMaconnexion().createStatement(); 
+			    		Statement unStat = uneBdd.getMaConnexion().createStatement(); 
 			    		ResultSet desResultats = unStat.executeQuery(requete);
 			    	
 			    		while (desResultats.next()) //tant qu'il donne un resultat 
@@ -339,7 +339,7 @@ public static ArrayList<Materiels> selectAllMateriels ()  //selection de tous le
 			   		String requete = "DELETE FROM Location WHERE idprof = " + idprof;
 			   		try {
 			   			uneBdd.seConnecter();
-			   			Statement unStat = uneBdd.getMaconnexion().createStatement();
+			   			Statement unStat = uneBdd.getMaConnexion().createStatement();
 			   			unStat.execute(requete);
 			   			unStat.close();
 			   			uneBdd.seDeconnecter();

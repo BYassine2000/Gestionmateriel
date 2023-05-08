@@ -1,7 +1,7 @@
 Drop database if exists Gestion_materiels ;
      
 create database Gestion_materiels;
-	use Gestion_materiels;
+Use Gestion_materiels;
 	create table Professeurs(idprof int (3) not null auto_increment,
 		Nom varchar(20),
         Prenom varchar(20),
